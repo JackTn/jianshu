@@ -25,7 +25,7 @@ class Header extends Component {
         const searchInfoList = []
         if(jsList.length) {
             for(let i = ((pageNum - 1) * 10); i< pageNum * 10; i++) {
-                jsList[i] && searchInfoList.push(<SearchInfoItem key={jsList[i]}>{jsList[i]}</SearchInfoItem>)
+                jsList[i] && searchInfoList.push(<SearchInfoItem key={jsList[i].con_id}>{jsList[i].userName}</SearchInfoItem>)
             }
         }
         if(focused || mouseIn) {

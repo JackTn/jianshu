@@ -4,7 +4,8 @@ import axios from 'axios'
 
 const ajaxGetList = (data) => ({
     type: headerActionTypes.HEADER_AJAX_GET_LIST,
-    data: fromJS(data.reduce((pre, cur) => [...pre, cur.userName], [])),
+    // data: fromJS(data.reduce((pre, cur) => [...pre, cur.userName], [])),
+    data: fromJS(data),
     totalPage: Math.ceil(data.length / 10)
 })
 
